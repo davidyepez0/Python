@@ -27,9 +27,6 @@ class Linkedlist:
     # Function for traversing the linked list   
     
     def show_list(self):
-        if self.head is None:
-            raise Exception("List is empty")
-        
         current_node = self.head
         while current_node:
             print(current_node.data, end = " -> ")
@@ -189,8 +186,6 @@ for data in range(num_people):
         
 for remove in range(num_people):
     cinema_list.remove_node_position(0)
+    cinema_list.show_list()
 
 print("The total in the cinema is:",total)
-cinema_list.show_list()
-        
-    
