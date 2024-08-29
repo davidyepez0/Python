@@ -24,7 +24,7 @@ class Linkedlist:
             yield node
             node = node.next      
         
-    # Function for traversing the linked list   
+    # Method for traversing the linked list   
     
     def show_list(self):
         current_node = self.head
@@ -33,13 +33,13 @@ class Linkedlist:
             current_node = current_node.next
         print("None")
 
-    # Function to add an item to the top of a linked list   
+    # Method to add an item to the top of a linked list   
                
     def add_first(self, node):
         node.next = self.head
         self.head = node    
 
-    # Function to add an item to the end of the linked list   
+    # Method to add an item to the end of the linked list   
     
     def add_last(self, node):
         if self.head is None:
@@ -49,7 +49,7 @@ class Linkedlist:
             pass
         current_node.next = node   
 
-    # Function to add a node after a specific element in the linked list.
+    # Method to add a node after a specific element in the linked list.
         
     def add_after(self, target_node_data, new_node):
         if self.head is None:
@@ -63,7 +63,7 @@ class Linkedlist:
 
         raise Exception("Node with data '%s' not found" % target_node_data)
 
-    # Function to add a node before a specific element in the linked list.   
+    # Method to add a node before a specific element in the linked list.   
     
     def add_before(self, target_node_data, new_node):
         if self.head is None:
@@ -82,7 +82,7 @@ class Linkedlist:
 
         raise Exception("Node with data '%s' not found" % target_node_data)
 
-    # Function to delete a node in the linked list
+    # Method to delete a node in the linked list
 
     def remove_node_data(self, target_node_data):
         if self.head is None:
@@ -101,7 +101,7 @@ class Linkedlist:
 
         raise Exception("Node with data '%s' not found" % target_node_data)
 
-    # Function to return an element from a specific position in the linked list.
+    # Method to return an element from a specific position in the linked list.
     
     def get_data(self, target_node_position):
         if self.head is None:
@@ -119,7 +119,7 @@ class Linkedlist:
             
         raise Exception("Node with position '%s' not found" % target_node_position)
 
-    # Function to invert the linked list
+    # Method to invert the linked list
     
     def reverse(self):
         if self.head is None:
@@ -136,7 +136,7 @@ class Linkedlist:
             
         self.head = previous_node
 
-    # Remove the element from a specific position in the linked list
+    # Method to remove the element from a specific position in the linked list
     
     def remove_node_position(self, target_node_position):
         if self.head is None:
